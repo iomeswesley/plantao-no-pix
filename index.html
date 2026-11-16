@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plantão no Pix — Antecipe seu plantão</title>
+<meta name="description" content="Transforme seus plantões em dinheiro na sua conta, de forma rápida e segura. Simule a antecipação do seu plantão.">
+<meta property="og:title" content="Plantão no Pix — Antecipe seu plantão">
+<meta property="og:description" content="Transforme seus plantões em dinheiro na sua conta, de forma rápida e segura.">
+<meta property="og:image" content="assets/medico-hero.webp">
+<meta name="theme-color" content="#021C37">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23021C37'/%3E%3Cpath d='M18 4 8 18h7l-1 10 10-14h-7l1-10z' fill='%23A8F712'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#021C37}
+a{color:inherit;text-decoration:none}a:hover{color:inherit}
+*{box-sizing:border-box}
+.pg{--u:calc(min(100vw, 720px) / 1024);--h:calc(min(100vw, 1440px) / 1199)}
+.col{position:relative;width:100%;max-width:720px;margin:0 auto}
+.btn{display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#C6F63C 0%,#96F606 100%);color:#08140A;border:none;border-radius:999px;font-family:'Montserrat',sans-serif;font-weight:800;letter-spacing:-0.01em;cursor:pointer;box-shadow:0 0 28px rgba(150,246,6,0.35);transition:transform .15s ease,box-shadow .15s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 40px rgba(150,246,6,0.5)}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.025));border:1px solid rgba(160,190,220,0.28)}
+.navlink:hover{color:#A8F712}
+input.campo{font-family:'Montserrat',sans-serif;outline:none}
+input.campo:focus{box-shadow:0 0 0 3px rgba(150,246,6,0.55)}
+.hd{display:none}
+@media (min-width:900px){.hd{display:block}.hm{display:none}}
+</style>
+</head>
+<body>
+<div class="pg" style="width:100%; background:#021C37; color:#FFFFFF; font-family:'Montserrat',sans-serif; overflow-x:hidden;">
+
+<!-- ===== 1. HERO — computador (imagem 1) ===== -->
+<section class="hd" style="background:#011C39;">
+  <div style="position:relative; width:100%; max-width:1440px; height:calc(1250 * var(--h)); margin:0 auto; overflow:hidden;">
+    <img src="assets/medico-hero.webp" alt="Médico sorrindo, de jaleco branco, estetoscópio e braços cruzados" style="position:absolute; left:calc(590 * var(--h)); top:calc(100 * var(--h)); width:calc(609 * var(--h)); height:auto; display:block; -webkit-mask-image:linear-gradient(to left,transparent 0%,#000 7%); mask-image:linear-gradient(to left,transparent 0%,#000 7%);">
+    <div style="position:absolute; left:calc(58 * var(--h)); top:calc(22 * var(--h));">
+      <div style="font-size:calc(46 * var(--h)); font-weight:800; letter-spacing:-0.035em; line-height:1.1;">plantão no <span style="color:#A8F712;">pix</span></div>
+      <div style="width:calc(97 * var(--h)); height:calc(7 * var(--h)); border-radius:9px; background:#A8F00C; margin-top:calc(14 * var(--h));"></div>
+    </div>
+    <nav style="position:absolute; left:calc(468 * var(--h)); top:calc(42 * var(--h)); display:flex; gap:calc(46 * var(--h)); font-size:calc(18 * var(--h)); font-weight:500;">
+      <a href="#como-funciona" class="navlink">Como funciona</a>
+      <a href="#antecipe" class="navlink">Vantagens</a>
+      <a href="#simular" class="navlink">Simular</a>
+    </nav>
+    <a href="#simular" class="btn" style="position:absolute; left:calc(901 * var(--h)); top:calc(25 * var(--h)); width:calc(245 * var(--h)); height:calc(60 * var(--h)); font-size:calc(22 * var(--h)); gap:calc(14 * var(--h));">Simular agora
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="width:calc(28 * var(--h)); height:calc(28 * var(--h));"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <h1 style="position:absolute; left:calc(60 * var(--h)); top:calc(205 * var(--h)); margin:0; font-size:calc(118 * var(--h)); line-height:0.94; font-weight:800; letter-spacing:-0.035em;">Antecipe<br><span style="color:#A8F712;">seu plantão.</span></h1>
+    <p style="position:absolute; left:calc(65 * var(--h)); top:calc(462 * var(--h)); width:calc(530 * var(--h)); margin:0; font-size:calc(40 * var(--h)); line-height:1.22; font-weight:500;">Transforme seus plantões em dinheiro na sua conta, de forma rápida e segura.</p>
+    <a href="#simular" class="btn" style="position:absolute; left:calc(60 * var(--h)); top:calc(662 * var(--h)); width:calc(508 * var(--h)); height:calc(116 * var(--h)); font-size:calc(40 * var(--h)); gap:calc(22 * var(--h));">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" style="width:calc(50 * var(--h)); height:calc(50 * var(--h));"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+      Simular agora
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="width:calc(44 * var(--h)); height:calc(44 * var(--h));"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ===== 1. HERO — celular (conteúdo da imagem 1, montagem das imagens de celular) ===== -->
+<section class="hm" style="background:#011C39;">
+  <div class="col" style="height:calc(1230 * var(--u)); overflow:hidden;">
+    <img src="assets/medico-hero.webp" alt="Médico sorrindo, de jaleco branco, estetoscópio e braços cruzados" style="position:absolute; left:calc(430 * var(--u)); top:calc(150 * var(--u)); width:calc(594 * var(--u)); height:auto; display:block;">
+    <div style="position:absolute; left:calc(58 * var(--u)); top:calc(25 * var(--u));">
+      <div style="font-size:calc(55 * var(--u)); font-weight:800; letter-spacing:-0.035em; line-height:1.1;">plantão no <span style="color:#A8F712;">pix</span></div>
+      <div style="width:calc(109 * var(--u)); height:calc(10 * var(--u)); border-radius:9px; background:#A8F00C; margin-top:calc(16 * var(--u));"></div>
+    </div>
+    <button type="button" aria-label="Abrir menu" style="position:absolute; right:calc(34 * var(--u)); top:calc(24 * var(--u)); background:none; border:none; padding:calc(6 * var(--u)); color:#FFFFFF; cursor:pointer; display:flex;">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" style="width:calc(62 * var(--u)); height:calc(62 * var(--u));"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <h1 style="position:absolute; left:calc(68 * var(--u)); top:calc(205 * var(--u)); margin:0; font-size:calc(86 * var(--u)); line-height:0.95; font-weight:800; letter-spacing:-0.035em;">Antecipe<br><span style="color:#A8F712;">seu plantão.</span></h1>
+    <div style="position:absolute; left:calc(72 * var(--u)); top:calc(420 * var(--u)); width:calc(140 * var(--u)); height:calc(11 * var(--u)); border-radius:9px; background:#A8F00C;"></div>
+    <p style="position:absolute; left:calc(70 * var(--u)); top:calc(478 * var(--u)); width:calc(400 * var(--u)); margin:0; font-size:calc(40 * var(--u)); line-height:1.24; font-weight:500;">Transforme seus plantões em dinheiro na sua conta, de forma rápida e segura.</p>
+    <a href="#simular" class="btn" style="position:absolute; left:calc(126 * var(--u)); top:calc(1030 * var(--u)); width:calc(772 * var(--u)); height:calc(145 * var(--u)); font-size:calc(54 * var(--u)); gap:calc(26 * var(--u));">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" style="width:calc(56 * var(--u)); height:calc(56 * var(--u));"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+      Simular agora
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="width:calc(50 * var(--u)); height:calc(50 * var(--u));"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ===== 3. Como funciona (imagem 2) ===== -->
+<section id="como-funciona" style="background:#021C37;">
+  <div class="col" style="padding:calc(110 * var(--u)) calc(82 * var(--u)) 0;">
+    <p style="margin:0 0 calc(36 * var(--u)); font-size:calc(64 * var(--u)); line-height:1; font-weight:800; letter-spacing:-0.03em;">Trabalhou, <span style="color:#A8F712;">recebeu.</span></p>
+    <h2 style="margin:0 0 0 calc(-4 * var(--u)); font-size:calc(126 * var(--u)); line-height:0.8; font-weight:800; letter-spacing:-0.035em;">Como<br><span style="color:#A8F712;">funciona</span></h2>
+    <p style="margin:calc(42 * var(--u)) 0 0; font-size:calc(38 * var(--u)); line-height:1.24; font-weight:500;">Antecipe o valor do seu plantão<br>em 3 passos simples.</p>
+    <div style="width:calc(127 * var(--u)); height:calc(10 * var(--u)); border-radius:9px; background:#A8F00C; margin-top:calc(46 * var(--u));"></div>
+
+    <div style="display:flex; flex-direction:column; gap:calc(24 * var(--u)); margin-top:calc(48 * var(--u));">
+      <div class="card" style="display:flex; align-items:center; min-height:calc(184 * var(--u)); border-radius:calc(36 * var(--u)); padding:calc(22 * var(--u)) calc(30 * var(--u)) calc(22 * var(--u)) calc(53 * var(--u));">
+        <div style="flex:none; width:calc(128 * var(--u)); height:calc(123 * var(--u)); border-radius:calc(24 * var(--u)); background:linear-gradient(160deg,#16393C,#0C2A3A); border:1px solid rgba(150,246,6,0.22); display:flex; align-items:center; justify-content:center;">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="width:calc(74 * var(--u)); height:calc(74 * var(--u));"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 3v3M16 3v3"/><path d="M8 16h.01M12 16h.01M16 16h.01M16 13h.01" stroke-width="2.6"/></svg>
+        </div>
+        <div style="flex:none; width:calc(4 * var(--u)); height:calc(86 * var(--u)); margin:0 calc(39 * var(--u)) 0 calc(42 * var(--u)); background:#A8F00C; border-radius:4px;"></div>
+        <div style="min-width:0;">
+          <div style="font-size:calc(40 * var(--u)); font-weight:700; line-height:1.2;">1. Informe seu plantão</div>
+          <div style="font-size:calc(32 * var(--u)); font-weight:500; line-height:1.3; color:#C9D3E0; margin-top:calc(8 * var(--u));">Dados simples e rápidos.</div>
+        </div>
+      </div>
+      <div class="card" style="display:flex; align-items:center; min-height:calc(178 * var(--u)); border-radius:calc(36 * var(--u)); padding:calc(22 * var(--u)) calc(30 * var(--u)) calc(22 * var(--u)) calc(53 * var(--u)); border-color:rgba(150,246,6,0.38);">
+        <div style="flex:none; width:calc(128 * var(--u)); height:calc(123 * var(--u)); border-radius:calc(24 * var(--u)); background:linear-gradient(160deg,#1C4A35,#0C2A3A); border:1px solid rgba(150,246,6,0.42); display:flex; align-items:center; justify-content:center;">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="width:calc(74 * var(--u)); height:calc(74 * var(--u));"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><path d="M5 8h14"/><path d="M9.5 12h.01M14.5 12h.01M9.5 16.5h.01M14.5 16.5h.01" stroke-width="3"/></svg>
+        </div>
+        <div style="flex:none; width:calc(4 * var(--u)); height:calc(86 * var(--u)); margin:0 calc(39 * var(--u)) 0 calc(42 * var(--u)); background:#A8F00C; border-radius:4px;"></div>
+        <div style="min-width:0;">
+          <div style="font-size:calc(40 * var(--u)); font-weight:700; line-height:1.2;">2. Simule sua antecipação</div>
+          <div style="font-size:calc(32 * var(--u)); font-weight:500; line-height:1.3; color:#C9D3E0; margin-top:calc(8 * var(--u));">Veja o valor disponível na hora.</div>
+        </div>
+      </div>
+      <div class="card" style="display:flex; align-items:center; min-height:calc(200 * var(--u)); border-radius:calc(36 * var(--u)); padding:calc(22 * var(--u)) calc(30 * var(--u)) calc(22 * var(--u)) calc(53 * var(--u)); border-color:rgba(150,246,6,0.38);">
+        <div style="flex:none; width:calc(128 * var(--u)); height:calc(123 * var(--u)); border-radius:calc(24 * var(--u)); background:linear-gradient(160deg,#1C4A35,#0C2A3A); border:1px solid rgba(150,246,6,0.42); display:flex; align-items:center; justify-content:center;">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="width:calc(78 * var(--u)); height:calc(78 * var(--u));"><ellipse cx="15" cy="6.5" rx="6" ry="2.5"/><path d="M9 6.5v4c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-4M21 10.5v4c0 1.4-2.7 2.5-6 2.5"/><ellipse cx="9" cy="13.5" rx="6" ry="2.5"/><path d="M3 13.5v4c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-4"/></svg>
+        </div>
+        <div style="flex:none; width:calc(4 * var(--u)); height:calc(86 * var(--u)); margin:0 calc(39 * var(--u)) 0 calc(42 * var(--u)); background:#A8F00C; border-radius:4px;"></div>
+        <div style="min-width:0;">
+          <div style="font-size:calc(40 * var(--u)); font-weight:700; line-height:1.2;">3. Receba seu dinheiro</div>
+          <div style="font-size:calc(32 * var(--u)); font-weight:500; line-height:1.3; color:#C9D3E0; margin-top:calc(8 * var(--u));">Após a aprovação, o valor<br>cai na sua conta via Pix.</div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#simular" class="btn" style="width:calc(749 * var(--u)); height:calc(137 * var(--u)); margin:calc(54 * var(--u)) auto 0; font-size:calc(54 * var(--u)); gap:calc(28 * var(--u));">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" style="width:calc(56 * var(--u)); height:calc(56 * var(--u));"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+      Simular agora
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="width:calc(50 * var(--u)); height:calc(50 * var(--u));"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+  <svg aria-hidden="true" viewBox="0 0 1024 120" preserveAspectRatio="none" style="display:block; width:100%; height:calc(120 * var(--u)); margin-top:calc(60 * var(--u));">
+    <path d="M0 100 C 300 60, 700 40, 1024 0" fill="none" stroke="#A8F00C" stroke-width="12"/>
+  </svg>
+</section>
+
+<!-- ===== 4. Simule sua antecipação (imagem 3) ===== -->
+<section id="simular" style="background:#021C37;">
+  <div class="col" style="padding:calc(110 * var(--u)) calc(52 * var(--u)) 0;">
+    <div style="position:relative; padding-left:calc(16 * var(--u));">
+      <img src="assets/calendario.webp" alt="" aria-hidden="true" style="position:absolute; left:calc(588 * var(--u)); top:calc(-20 * var(--u)); width:calc(330 * var(--u)); height:auto; display:block;">
+      <h2 style="position:relative; margin:0; font-size:calc(92 * var(--u)); line-height:0.92; font-weight:800; letter-spacing:-0.035em;">Simule sua<br><span style="color:#A8F712;">antecipação.</span></h2>
+      <p style="position:relative; margin:calc(30 * var(--u)) 0 0; font-size:calc(34 * var(--u)); line-height:1.25; font-weight:500;">Veja quanto você pode receber<br>do seu plantão, de forma rápida.</p>
+      <div style="width:calc(137 * var(--u)); height:calc(10 * var(--u)); border-radius:9px; background:#A8F00C; margin-top:calc(32 * var(--u));"></div>
+    </div>
+
+    <div style="padding:0 calc(22 * var(--u));">
+      <label for="valor1" style="display:block; margin:calc(62 * var(--u)) 0 0 calc(6 * var(--u)); font-size:calc(36 * var(--u)); font-weight:700;">Valor do plantão</label>
+      <input id="valor1" class="campo" type="text" inputmode="numeric" value="" data-campo="valor" style="display:block; width:100%; height:calc(110 * var(--u)); margin-top:calc(24 * var(--u)); padding:0 calc(31 * var(--u)); border:none; border-radius:calc(30 * var(--u)); background:#FFFFFF; color:#0A1424; font-size:calc(46 * var(--u)); font-weight:700;">
+
+      <label for="dias1" style="display:block; margin:calc(40 * var(--u)) 0 0 calc(6 * var(--u)); font-size:calc(36 * var(--u)); font-weight:700;">Período (dias)</label>
+      <input id="dias1" class="campo" type="text" inputmode="numeric" value="" data-campo="dias" style="display:block; width:100%; height:calc(110 * var(--u)); margin-top:calc(24 * var(--u)); padding:0 calc(31 * var(--u)); border:none; border-radius:calc(30 * var(--u)); background:#FFFFFF; color:#0A1424; font-size:calc(46 * var(--u)); font-weight:700;">
+      <p style="margin:calc(16 * var(--u)) 0 0 calc(6 * var(--u)); font-size:max(12px, calc(28 * var(--u))); line-height:1.35; color:#C9D3E0;">Dias entre hoje e o dia 30 do mês seguinte, quando o plantão costuma ser pago. Já vem preenchido, mas você pode alterar.</p>
+    </div>
+
+    <div class="card" style="margin-top:calc(50 * var(--u)); border-radius:calc(32 * var(--u)); padding:calc(8 * var(--u)) 0 calc(22 * var(--u));">
+      <div style="display:flex; align-items:center; height:calc(86 * var(--u)); padding:0 calc(47 * var(--u)) 0 calc(58 * var(--u));">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linejoin="round" style="flex:none; width:calc(52 * var(--u)); height:calc(52 * var(--u));"><path d="M12 3 2.5 8 12 13l9.5-5L12 3z"/><path d="M2.5 12 12 17l9.5-5M2.5 16 12 21l9.5-5"/></svg>
+        <span style="flex:1; margin-left:calc(45 * var(--u)); font-size:calc(34 * var(--u)); font-weight:500;">Valor solicitado</span>
+        <span style="font-size:calc(40 * var(--u)); font-weight:800;"><span data-b="valorTexto"></span></span>
+      </div>
+      <div style="height:1px; margin:0 calc(52 * var(--u)) 0 calc(51 * var(--u)); background:rgba(160,190,220,0.45);"></div>
+      <div style="display:flex; align-items:center; height:calc(86 * var(--u)); padding:0 calc(47 * var(--u)) 0 calc(58 * var(--u));">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" style="flex:none; width:calc(52 * var(--u)); height:calc(52 * var(--u));"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg>
+        <span style="flex:1; margin-left:calc(45 * var(--u)); font-size:calc(34 * var(--u)); font-weight:500;">Taxa (0,16% ao dia)</span>
+        <span style="font-size:calc(36 * var(--u)); font-weight:500;"><span data-b="taxaTexto"></span></span>
+      </div>
+      <div style="display:flex; align-items:center; height:calc(122 * var(--u)); margin:calc(8 * var(--u)) calc(22 * var(--u)) 0; padding:0 calc(32 * var(--u)) 0 calc(41 * var(--u)); border-radius:calc(28 * var(--u)); background:linear-gradient(180deg,#D6FB86,#BDF55A); color:#08140A;">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" style="flex:none; width:calc(66 * var(--u)); height:calc(66 * var(--u));"><path d="M3 7.5V18a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-3"/><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H17v3"/><path d="M3 7.5A1 1 0 0 0 4 8.5h15a1 1 0 0 1 1 1V12"/><rect x="14" y="12" width="7" height="4" rx="2"/></svg>
+        <span style="flex:1; margin-left:calc(30 * var(--u)); font-size:calc(40 * var(--u)); font-weight:700;">Você recebe</span>
+        <span style="font-size:calc(50 * var(--u)); font-weight:800; letter-spacing:-0.01em;"><span data-b="liquidoTexto"></span></span>
+      </div>
+    </div>
+
+    <a href="https://wa.me/5547997632683" data-wa target="_blank" rel="noopener" class="btn" style="width:calc(816 * var(--u)); height:calc(127 * var(--u)); margin:calc(63 * var(--u)) auto 0; font-size:calc(56 * var(--u)); gap:calc(30 * var(--u));">
+      Continuar
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="width:calc(54 * var(--u)); height:calc(54 * var(--u));"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+  <svg aria-hidden="true" viewBox="0 0 1024 120" preserveAspectRatio="none" style="display:block; width:100%; height:calc(120 * var(--u)); margin-top:calc(60 * var(--u));">
+    <path d="M0 100 C 300 60, 700 40, 1024 0" fill="none" stroke="#A8F00C" stroke-width="12"/>
+  </svg>
+</section>
+
+<!-- ===== 5. Antecipe seu plantão / Receba hoje (imagem 4) ===== -->
+<section id="antecipe" style="background:#021C37;">
+  <div class="col" style="padding:calc(110 * var(--u)) calc(62 * var(--u)) calc(100 * var(--u));">
+    <div style="padding-left:calc(13 * var(--u));">
+      <h2 style="margin:0; font-size:calc(110 * var(--u)); line-height:0.87; font-weight:800; letter-spacing:-0.035em;">Antecipe<br><span style="color:#A8F712;">seu plantão.</span></h2>
+      <p style="margin:calc(34 * var(--u)) 0 0 calc(4 * var(--u)); font-size:calc(38 * var(--u)); line-height:1.29; font-weight:500;">Receba hoje o valor do seu<br>plantão, com transparência<br>e segurança.</p>
+      <div style="width:calc(138 * var(--u)); height:calc(12 * var(--u)); border-radius:9px; background:#A8F00C; margin:calc(34 * var(--u)) 0 0 calc(7 * var(--u));"></div>
+    </div>
+
+    <div class="card" style="margin-top:calc(48 * var(--u)); border-radius:calc(40 * var(--u)); padding:calc(43 * var(--u)) calc(54 * var(--u)) calc(48 * var(--u));">
+      <label for="valor2" style="display:block; font-size:calc(34 * var(--u)); font-weight:700;">Valor do seu plantão</label>
+      <div style="display:flex; align-items:center; height:calc(118 * var(--u)); margin-top:calc(30 * var(--u)); padding:0 calc(30 * var(--u)) 0 calc(41 * var(--u)); border-radius:calc(22 * var(--u)); background:rgba(160,190,220,0.17); border:1px solid rgba(160,190,220,0.4);">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#A8F00C" stroke-width="1.8" stroke-linejoin="round" style="flex:none; width:calc(62 * var(--u)); height:calc(62 * var(--u));"><path d="M3 7.5V18a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-3"/><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H17v3"/><path d="M3 7.5A1 1 0 0 0 4 8.5h15a1 1 0 0 1 1 1V12"/><rect x="14" y="12" width="7" height="4" rx="2"/></svg>
+        <input id="valor2" class="campo" type="text" inputmode="numeric" value="" data-campo="valor" style="flex:1; min-width:0; margin-left:calc(42 * var(--u)); padding:0; border:none; background:transparent; color:#FFFFFF; font-size:calc(58 * var(--u)); font-weight:700;">
+      </div>
+
+      <label for="dias2" style="display:block; margin-top:calc(36 * var(--u)); font-size:calc(34 * var(--u)); font-weight:700;">Período (dias)</label>
+      <div style="display:flex; align-items:center; height:calc(118 * var(--u)); margin-top:calc(30 * var(--u)); padding:0 calc(30 * var(--u)) 0 calc(41 * var(--u)); border-radius:calc(22 * var(--u)); background:rgba(160,190,220,0.17); border:1px solid rgba(160,190,220,0.4);">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#A8F00C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none; width:calc(62 * var(--u)); height:calc(62 * var(--u));"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 3v3M16 3v3"/></svg>
+        <input id="dias2" class="campo" type="text" inputmode="numeric" value="" data-campo="dias" style="flex:1; min-width:0; margin-left:calc(42 * var(--u)); padding:0; border:none; background:transparent; color:#FFFFFF; font-size:calc(58 * var(--u)); font-weight:700;">
+      </div>
+      <p style="margin:calc(16 * var(--u)) 0 0; font-size:max(12px, calc(28 * var(--u))); line-height:1.35; color:#C9D3E0;">Dias entre hoje e o dia 30 do mês seguinte, quando o plantão costuma ser pago. Já vem preenchido, mas você pode alterar.</p>
+
+      <div style="display:flex; align-items:stretch; margin-top:calc(34 * var(--u));">
+        <div style="flex:none; width:calc(405 * var(--u)); padding-left:calc(14 * var(--u));">
+          <div style="font-size:max(11px, calc(26 * var(--u))); font-weight:500;">Prazo até o recebimento</div>
+          <div style="font-size:calc(36 * var(--u)); font-weight:700; margin-top:calc(8 * var(--u));"><span data-b="prazoTexto"></span></div>
+        </div>
+        <div style="flex:none; width:2px; background:rgba(160,190,220,0.45);"></div>
+        <div style="flex:1; padding-left:calc(82 * var(--u));">
+          <div style="font-size:max(11px, calc(26 * var(--u))); font-weight:500;">Taxa diária</div>
+          <div style="font-size:calc(36 * var(--u)); font-weight:700; margin-top:calc(8 * var(--u));">0,16%</div>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:center; justify-content:space-between; height:calc(207 * var(--u)); margin:calc(46 * var(--u)) calc(-19 * var(--u)) 0; padding:0 calc(50 * var(--u)) 0 calc(53 * var(--u)); border-radius:calc(26 * var(--u)); border:3px solid #A8F712; background:linear-gradient(180deg,rgba(40,100,40,0.5),rgba(10,55,45,0.55)); box-shadow:0 0 30px rgba(150,246,6,0.22), inset 0 0 30px rgba(150,246,6,0.12);">
+        <div>
+          <div style="font-size:calc(38 * var(--u)); font-weight:700;">Você recebe</div>
+          <div style="font-size:calc(80 * var(--u)); font-weight:800; color:#A8F712; letter-spacing:-0.02em; line-height:1.1; margin-top:calc(6 * var(--u));"><span data-b="liquidoTexto"></span></div>
+        </div>
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#A8F712" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" style="flex:none; width:calc(120 * var(--u)); height:calc(120 * var(--u)); filter:drop-shadow(0 0 6px rgba(150,246,6,0.6));"><circle cx="12" cy="12" r="10"/><path d="m7.5 12.5 3 3 6-6.5" stroke-width="1.8"/></svg>
+      </div>
+    </div>
+
+    <a href="https://wa.me/5547997632683" data-wa target="_blank" rel="noopener" class="btn" style="width:100%; height:calc(130 * var(--u)); margin-top:calc(52 * var(--u)); font-size:calc(52 * var(--u)); gap:calc(30 * var(--u));">
+      Solicitar antecipação
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="width:calc(54 * var(--u)); height:calc(54 * var(--u));"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ===== 6. Médico, cansado e inseguro — computador (espelho do hero) ===== -->
+<section class="hd" style="background:#021C35;">
+  <div style="position:relative; width:100%; max-width:1440px; height:calc(1180 * var(--h)); margin:0 auto; overflow:hidden;">
+    <img src="assets/medica.webp" alt="Médica de jaleco branco e estetoscópio, sorrindo enquanto lê documentos numa prancheta" style="position:absolute; left:calc(-30 * var(--h)); top:calc(80 * var(--h)); width:calc(780 * var(--h)); height:auto; display:block;">
+    <div style="position:absolute; left:calc(735 * var(--h)); top:calc(170 * var(--h)); width:calc(440 * var(--h));">
+      <h2 style="margin:0; font-size:calc(108 * var(--h)); line-height:1; font-weight:800; letter-spacing:-0.035em;">Médico,</h2>
+      <p style="margin:calc(22 * var(--h)) 0 0; font-size:calc(42 * var(--h)); line-height:1.24; font-weight:600;">cansado e inseguro<br>de esperar pelo<br>recebimento<br><span style="color:#A8F712; font-weight:700;">dos seus plantões?</span></p>
+      <div style="width:calc(140 * var(--h)); height:calc(11 * var(--h)); border-radius:9px; background:#A8F00C; margin-top:calc(44 * var(--h));"></div>
+      <p style="margin:calc(40 * var(--h)) 0 0; font-size:calc(34 * var(--h)); font-weight:500;">Nós temos a solução:</p>
+      <p style="margin:calc(18 * var(--h)) 0 0; font-size:calc(42 * var(--h)); line-height:1.2; font-weight:600;">a <span style="color:#A8F712; font-weight:800;">antecipação</span><br>dos seus<br><span style="color:#A8F712; font-weight:800;">recebíveis.</span></p>
+      <a href="#simular" class="btn" style="width:calc(440 * var(--h)); height:calc(104 * var(--h)); margin-top:calc(52 * var(--h)); font-size:calc(36 * var(--h)); gap:calc(20 * var(--h));">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" style="width:calc(50 * var(--h)); height:calc(50 * var(--h));"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+        Simular agora
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="width:calc(44 * var(--h)); height:calc(44 * var(--h));"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+  <svg aria-hidden="true" viewBox="0 0 1024 120" preserveAspectRatio="none" style="display:block; width:100%; height:calc(100 * var(--h));">
+    <path d="M0 100 C 300 60, 700 40, 1024 0 L1024 120 L0 120 Z" fill="#FFFFFF"/>
+    <path d="M0 100 C 300 60, 700 40, 1024 0" fill="none" stroke="#A8F00C" stroke-width="12"/>
+  </svg>
+</section>
+
+<!-- ===== 6. Médico, cansado e inseguro — celular (imagem 5) ===== -->
+<section id="medico" class="hm" style="background:#021C35;">
+  <div class="col" style="height:calc(1340 * var(--u)); overflow:hidden;">
+    <img src="assets/medica.webp" alt="Médica de jaleco branco e estetoscópio, sorrindo enquanto lê documentos numa prancheta" style="position:absolute; left:calc(460 * var(--u)); top:calc(260 * var(--u)); width:calc(580 * var(--u)); height:auto; display:block;">
+    <div style="position:absolute; left:calc(70 * var(--u)); top:calc(215 * var(--u)); width:calc(560 * var(--u));">
+      <h2 style="margin:0; font-size:calc(112 * var(--u)); line-height:1; font-weight:800; letter-spacing:-0.03em;">Médico,</h2>
+      <p style="margin:calc(24 * var(--u)) 0 0; font-size:calc(50 * var(--u)); line-height:1.24; font-weight:600;">cansado e inseguro<br>de esperar pelo<br>recebimento<br><span style="color:#A8F712; font-weight:700;">dos seus plantões?</span></p>
+      <div style="width:calc(152 * var(--u)); height:calc(12 * var(--u)); border-radius:9px; background:#A8F00C; margin-top:calc(50 * var(--u));"></div>
+      <p style="margin:calc(44 * var(--u)) 0 0; font-size:calc(36 * var(--u)); font-weight:500;">Nós temos a solução:</p>
+      <p style="margin:calc(20 * var(--u)) 0 0; font-size:calc(50 * var(--u)); line-height:1.2; font-weight:600;">a <span style="color:#A8F712; font-weight:800;">antecipação</span><br>dos seus<br><span style="color:#A8F712; font-weight:800;">recebíveis.</span></p>
+    </div>
+    <a href="#simular" class="btn" style="position:absolute; left:calc(126 * var(--u)); top:calc(1160 * var(--u)); width:calc(772 * var(--u)); height:calc(145 * var(--u)); font-size:calc(54 * var(--u)); gap:calc(26 * var(--u));">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" style="width:calc(56 * var(--u)); height:calc(56 * var(--u));"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+      Simular agora
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="width:calc(50 * var(--u)); height:calc(50 * var(--u));"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+  <svg aria-hidden="true" viewBox="0 0 1024 120" preserveAspectRatio="none" style="display:block; width:100%; height:calc(120 * var(--u));">
+    <path d="M0 100 C 300 60, 700 40, 1024 0 L1024 120 L0 120 Z" fill="#FFFFFF"/>
+    <path d="M0 100 C 300 60, 700 40, 1024 0" fill="none" stroke="#A8F00C" stroke-width="12"/>
+  </svg>
+</section>
+
+</div>
+
+<script>
+(function () {
+  var TAXA_DIA = 0.001666; // 0,1666% ao dia (exibido como 0,16%)
+  var NUMERO = '5547997632683';
+  function diasPadrao() {
+    var hoje = new Date();
+    var inicio = new Date(hoje.getFullYear(), hoje.getMonth(), hoje.getDate());
+    var ultimoDia = new Date(hoje.getFullYear(), hoje.getMonth() + 2, 0).getDate();
+    var alvo = new Date(hoje.getFullYear(), hoje.getMonth() + 1, Math.min(30, ultimoDia));
+    return Math.round((alvo - inicio) / 86400000);
+  }
+  function brl(n) {
+    return 'R$ ' + n.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+  var st = { valor: 10000, dias: diasPadrao() };
+  function waLink() {
+    var msg;
+    if (st.valor > 0) {
+      msg = 'Olá! Vim pelo site do *Plantão no Pix* e quero antecipar meu plantão.\n\n' +
+        '*Minha simulação:*\n' +
+        '• Valor do plantão: ' + brl(st.valor) + '\n' +
+        '• Período: ' + st.dias + (st.dias === 1 ? ' dia' : ' dias') + '\n\n' +
+        'Pode me ajudar a dar continuidade?';
+    } else {
+      msg = 'Olá! Vim pelo site do *Plantão no Pix* e quero simular a antecipação do meu plantão. Pode me ajudar?';
+    }
+    return 'https://wa.me/' + NUMERO + '?text=' + encodeURIComponent(msg);
+  }
+  function render(ativo) {
+    var taxa = st.valor * TAXA_DIA * st.dias;
+    var v = {
+      valorTexto: brl(st.valor),
+      taxaTexto: brl(taxa),
+      liquidoTexto: brl(Math.max(0, st.valor - taxa)),
+      prazoTexto: st.dias + (st.dias === 1 ? ' dia' : ' dias'),
+      diasTexto: st.dias ? String(st.dias) : ''
+    };
+    document.querySelectorAll('[data-b]').forEach(function (el) { el.textContent = v[el.getAttribute('data-b')]; });
+    document.querySelectorAll('input[data-campo="valor"]').forEach(function (el) { el.value = v.valorTexto; });
+    document.querySelectorAll('input[data-campo="dias"]').forEach(function (el) { el.value = v.diasTexto; });
+    var link = waLink();
+    document.querySelectorAll('a[data-wa]').forEach(function (a) { a.href = link; a.target = '_blank'; a.rel = 'noopener'; });
+  }
+  document.querySelectorAll('input[data-campo]').forEach(function (el) {
+    el.addEventListener('input', function () {
+      var d = el.value.replace(/\D/g, '');
+      if (el.getAttribute('data-campo') === 'valor') st.valor = d ? Number(d) / 100 : 0;
+      else st.dias = d ? Number(d.slice(0, 3)) : 0;
+      render(el);
+      var n = el.value.length; try { el.setSelectionRange(n, n); } catch (e) {}
+    });
+  });
+  render(null);
+})();
+</script>
+</body>
+</html>
